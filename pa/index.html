@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Perspective + Alpha</title>
+        <style>
+            body {
+                background: #fff; margin: 0px; padding: 0;
+                overflow: hidden;
+            }
+            #content {
+                background: white; 
+                margin: 10px; padding: 0px;
+                position: absolute;
+                top:0; left:0;
+                width: calc(100% - 20px);
+                height: calc(100% - 20px);
+            }
+
+            #content ul {
+                margin: 0; padding: 0;
+                list-style-type: none;
+            }
+            #content ul li{
+                position: absolute;
+            }
+            #content ul li img{
+                position: relative;
+                width: 100%;
+            }
+
+        </style>
+        <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    </head>
+    <body>
+        <div class="title" style="z-index: 1;"><img style="width: 100%;" src='../sample/title.jpg'></div>
+
+        <div id="content">
+            <ul></ul>
+        </div>
+
+        <script>
+            var OPTIONS = {
+                perspective: true,
+                opacity: true,
+                imgs: [
+                    '../sample/001.jpg',
+                    '../sample/002.jpg',
+                    '../sample/003.jpg',
+                    '../sample/004.jpg'
+                ]
+            };
+
+        </script>
+        <script src='../display.js'></script>
+    </body>
+</html>
